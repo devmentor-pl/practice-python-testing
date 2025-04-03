@@ -4,7 +4,34 @@
 
 # `#02` Python: Testowanie
 
-Tutaj treść
+Twoim zadaniem jest stworzenie funkcji `is_valid_promo(code)`, która sprawdza poprawność kodu promocyjnego. Następnie napiszesz testy z użyciem `pytest` i mechanizmu parametryzacji, aby sprawdzić funkcję dla wielu różnych przypadków.
+
+
+## Wymagania funkcji
+
+Funkcja `is_valid_promo(code)` powinna zwracać `True` tylko wtedy, gdy:
+
+- `code` to string,
+- długość kodu wynosi dokładnie 10 znaków,
+- kod zawiera wyłącznie **duże litery (A-Z)** i **cyfry (0–9)**,
+- kod zawiera **przynajmniej dwie cyfry**.
+
+W przeciwnym wypadku funkcja powinna zwracać `False`.
+
+## Co masz zrobić?
+
+1. Zaimplementuj funkcję `is_valid_promo(code)` w pliku `promo.py`.
+2. W pliku `test_promo.py` napisz testy z użyciem `pytest.mark.parametrize`, które sprawdzają poprawność różnych kodów.
+3. Uwzględnij zarówno testy pozytywne (poprawne kody), jak i negatywne (błędne formaty).
+
+## Przykładowe przypadki testowe
+
+- Kod poprawny: `"ABC123XY90"`
+- Za krótki kod: `"AB123"`
+- Małe litery: `"abc123defg"`
+- Brak cyfr: `"ABCDEFGHIJ"`
+- Nie-string (np. liczba): `1234567890`
+- Znaki specjalne: `"ABC!@#123$"`
 
 
 &nbsp;

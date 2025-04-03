@@ -4,7 +4,37 @@
 
 # `#04` Python: Testowanie
 
-Tutaj treść
+Twoim zadaniem jest przetestowanie funkcji `validate_user(data)`, która sprawdza poprawność danych użytkownika. Do testów użyjesz mechanizmu `pytest.fixture`, który pozwala w prosty sposób przygotować i wielokrotnie używać przykładowych danych.
+
+
+## Opis funkcji
+
+Funkcja `validate_user(data)` otrzymuje słownik z danymi użytkownika i sprawdza, czy:
+
+- pole `"email"`:
+  - zawiera znak `@`,
+  - kończy się na `.pl` lub `.com`,
+- pole `"age"`:
+  - jest liczbą całkowitą,
+  - jest większe lub równe 18,
+- pole `"name"`:
+  - składa się wyłącznie z liter (bez cyfr i znaków specjalnych).
+
+Jeśli wszystkie warunki są spełnione, funkcja zwraca `True`. W przeciwnym razie – `False`.
+
+## Co masz zrobić?
+
+1. Zaimplementuj funkcję `validate_user(data)` w pliku `user.py`.
+2. W pliku `test_user.py`:
+   - przygotuj fixture z poprawnymi danymi użytkownika,
+   - napisz test pozytywny dla danych z fixture,
+   - stwórz osobne testy negatywne, modyfikując fixture (np. zły e-mail, wiek poniżej 18, imię z cyframi itp.).
+
+## Wymagania
+
+- Fixture powinna zwracać słownik zawierający dane: `name`, `email`, `age`.
+- Nie używaj parametryzacji – wystarczy kilka oddzielnych funkcji testowych.
+- Skup się na czytelności i pokryciu typowych błędów użytkownika.
 
 
 &nbsp;

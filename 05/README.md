@@ -4,8 +4,42 @@
 
 # `#05` Python: Testowanie
 
-Tutaj treść
+Twoim zadaniem jest zaimplementowanie klasy `Cart`, która pozwala dodawać i usuwać produkty oraz obliczać łączną cenę koszyka. Następnie napiszesz testy sprawdzające poprawność działania tej klasy.
 
+
+## Zachowanie klasy Cart
+
+Klasa `Cart` powinna działać zgodnie z poniższymi zasadami:
+
+- Przechowuje listę produktów w postaci słowników np. `{"name": "apple", "price": 3.5}`
+- Metody:
+  - `add(product)` – dodaje produkt do koszyka,
+  - `remove(product_name)` – usuwa pierwszy produkt o podanej nazwie,
+  - `total()` – zwraca łączną cenę wszystkich produktów jako `float`,
+  - `items()` – zwraca listę aktualnych produktów w koszyku.
+
+## Co masz zrobić?
+
+1. Zaimplementuj klasę `Cart` w pliku `cart.py`.
+2. W pliku `test_cart.py` napisz testy jednostkowe:
+   - dodawanie produktu,
+   - usuwanie produktu,
+   - obliczanie sumy,
+   - zachowanie się przy pustym koszyku,
+   - próba usunięcia nieistniejącego produktu (powinna nie robić nic).
+
+## Wymagania
+
+- Przetestuj każdy przypadek w osobnej funkcji testowej.
+- Możesz użyć `pytest` lub `unittest`.
+- Nie używaj zaawansowanego mockowania – testuj tylko logikę klasy.
+
+
+## Wskazówki
+
+- Do obliczania sumy użyj np. `sum(p["price"] for p in self._products)`.
+- Usuwając produkt, sprawdź jego `name` – nie musisz sprawdzać całego słownika.
+- Metoda `items()` może zwracać kopię listy lub oryginał – ważne, by testy nie zmieniały jej bezpośrednio.
 
 &nbsp;
 > :no_entry: *Jeśli nie posiadasz materiałów do tego zadania tj. **PDF, projekt + Code Review**, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/workshop-python-testing)*
