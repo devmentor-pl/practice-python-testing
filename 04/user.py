@@ -1,8 +1,4 @@
-def validate_user(data):
-
-    email = sample_data['user']['email']
-    age = sample_data['user']['age']
-    name = sample_data['user']['name']
+def validate_user(email, age, name):
 
     if '@' not in email:
         return False
