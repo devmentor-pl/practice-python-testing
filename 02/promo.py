@@ -1,5 +1,6 @@
 import string
 
+
 def is_valid_promo(code):
     if not isinstance(code, str):
         return False
@@ -9,7 +10,8 @@ def is_valid_promo(code):
         return False
     if not code.isupper():
         return False
-    if not any(char.isdigit() for char in code):
+    digits_count = sum(char.isdigit() for char in code)
+    if digits_count < 2:
         return False
 
     return True
