@@ -21,7 +21,7 @@ Funkcja `send_payment(payment_data, gateway)`:
 ## Co masz zrobić?
 
 1. Zaimplementuj funkcję `send_payment()` w pliku `payment.py`.
-2. W pliku `test_payment.py` użyj obiektu `Mock` z `unittest.mock`, aby zasymulować bramkę płatniczą (`gateway`).
+2. W pliku `test_payment.py` użyj obiektu `Mock` z `  `, aby zasymulować bramkę płatniczą (`gateway`).
 3. Napisz testy, które sprawdzają:
    - poprawną płatność (mock zwraca `True`),
    - odrzuconą płatność (`False`),
