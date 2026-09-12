@@ -52,3 +52,33 @@ def test_validate_user_empty_name(valid_user_data):
     data = valid_user_data.copy()
     data["name"] = ""
     assert validate_user(data) is False
+    
+def test_email_is_str(valid_user_data):
+    data = valid_user_data.copy()
+    data["email"] = 1
+    assert validate_user(data) is False
+    
+def test_name_is_str(valid_user_data):
+    data = valid_user_data.copy()
+    data["name"] = 1
+    assert validate_user(data) is False
+    
+def test_age_is_int(valid_user_data):
+    data = valid_user_data.copy()
+    data["age"] = "abc"
+    assert validate_user(data) is False
+
+def test_missing_name(valid_user_data):
+    data = valid_user_data.copy()
+    del data["name"]
+    assert validate_user(data) is False
+    
+def test_missing_email(valid_user_data):
+    data = valid_user_data.copy()
+    del data["email"]
+    assert validate_user(data) is False
+    
+def test_missing_age(valid_user_data):
+    data = valid_user_data.copy()
+    del data["age"]
+    assert validate_user(data) is False

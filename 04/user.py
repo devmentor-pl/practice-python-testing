@@ -1,6 +1,12 @@
 import string
 
 def validate_user(data):
+    if "email" not in data or "name" not in data or "age" not in data:
+        return False
+    if type(data["email"]) != str:
+        return False
+    if type(data["name"]) != str:
+            return False
     if "@" not in data["email"]:
         return False
     if not data["email"].endswith((".com", ".pl")):
