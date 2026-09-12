@@ -28,6 +28,10 @@ def test_empty_cart_total(cart):
     assert cart.total() == 0.0
 
 def test_remove_nonexistent_product(cart):
+    cart.add({'name': 'banana', 'price': 4.5})
+    cart.add({'name': 'apple', 'price': 3.5})
+    items_before_delete = cart.items()
     cart.remove("orange")
-    assert cart.items() == []
+    items_after_delete = cart.items()
+    assert items_before_delete == items_after_delete
     
