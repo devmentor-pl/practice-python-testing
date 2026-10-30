@@ -19,6 +19,8 @@ class TestValidateOrder(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             validate_order(order_4)
         self.assertEqual(str(context.exception), "Brak adresu dostawy")
+    def test_correct(self):
+        self.assertEqual(validate_order(order_5), True)
 
 order_1 = {
     "user_id": "Marek7",
@@ -53,6 +55,15 @@ order_4 = {
     "delivery": {
         "method": "courier",         
         "address": ""
+    }
+}
+
+order_5 = {
+    "user_id": 101,
+    "items": ["keyboard", "mouse", "monitor"],
+    "delivery": {
+        "method": "courier",         
+        "address": "ul. Polna 10, 00-001 Warszawa"
     }
 }
 

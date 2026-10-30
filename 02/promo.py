@@ -24,7 +24,3 @@ def is_valid_promo(code):
     elif digit_count(code) < 2:
         return False
     return True
-
-promo = "P!IAKISĄ22"
-
-print(is_valid_promo(promo))

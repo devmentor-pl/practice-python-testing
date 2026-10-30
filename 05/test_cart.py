@@ -7,14 +7,14 @@ banana = {"name": "banana", "price": 7}
 def test_add_product():
     cart_1 = Cart()
     cart_1.add(apple)
-    assert cart_1.items() == ["apple"]
+    assert cart_1.items() == [{"name": "apple", "price": 3.5}]
 
 def test_remove_product():
     cart_2 = Cart()
     cart_2.add(apple)
     cart_2.add(banana)
     cart_2.remove("apple")
-    assert cart_2.items() == ["banana"]
+    assert cart_2.items() == [{"name": "banana", "price": 7}]
 
 def test_total_price():
     cart_3 = Cart()
@@ -31,4 +31,4 @@ def test_remove_nonexistent_product():
     cart_5.add(apple)
     cart_5.add(banana)
     cart_5.remove("lemon")
-    assert cart_5.items() == ["apple", "banana"]
+    assert cart_5.items() == [{"name": "apple", "price": 3.5}, {"name": "banana", "price": 7}]
